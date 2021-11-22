@@ -7,7 +7,7 @@
         <!-- .wrap -->
         <div id="wrap">
             <!-- #header -->
-            <header id="header">
+            <header id="header" >
                 <div id="top-bar">
                 </div>
                 <!-- #top-bar -->

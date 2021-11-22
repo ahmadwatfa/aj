@@ -41,12 +41,13 @@ class AboutController extends Controller
     {
         $request->validate([
             'description' => 'required|min:20|max:9000|string',
-
+            'image' => 'required|image',
         ],[
             'required' => 'هذا الحقل مطلوب',
             'string' => 'هذا الحقل يجب ان يحتوي على نص',
             'max' => 'هذا الحقل طويل للفاية',
             'min' => 'هذا الحقل قصير للغاية',
+            'image' => 'الرجاء ارفاق صورة',
         ]);
         
         $published = About::get();
@@ -55,11 +56,20 @@ class AboutController extends Controller
             $publish->save();
         }
 
-        $about = new About();
-        $about->description = $request->post('description');
-        $about->save();
+        // $about = new About();
+        // $about->description = $request->post('description');
+        // $about->save();
+
+        if ($request->hasFile('image'))
+        {
+            $image = $request->file('image')->store('activity' , 'public');
+        }
+        $data = array_merge($request->all() , ['image'=> $image]);
         
+        $about = About::create($data);
+
         return redirect()->route('about.index')->with('success' , 'تم اضافة النبذة بنجاح');
+    
     }
 
     /**
@@ -107,19 +117,35 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate 
         $request->validate([
-            'description' => 'required|min:20|max:9000|string',
+            'description' => 'min:3|max:5000|string',
+            'image' => 'image'
         ],[
             'required' => 'هذا الحقل مطلوب',
             'string' => 'هذا الحقل يجب ان يحتوي على نص',
             'max' => 'هذا الحقل طويل للفاية',
             'min' => 'هذا الحقل قصير للغاية',
+            'image' => 'الرجاء ارفاق صورة'
         ]);
 
+        //Reset all
+        foreach(About::get() as $publish){
+            $publish->is_publish = 0 ;
+            $publish->update();
+        }
+        //Get About
         $about = About::findOrFail($id);
-        $about['is_publish'] = 1;
-        $about->update($request->all());
-
+        //Save Image
+        if ($request->hasFile('image'))
+        {
+            $about->image = $request->file('image')->store('about' , 'public');
+        }
+        //Update Data
+        $about->description = $request->description;
+        $about->is_publish = 1;
+        $about->save();
+        
         return redirect(route('about.index'))->with('update' , 'تم تعديل النبذة بنجاح');
     }
 

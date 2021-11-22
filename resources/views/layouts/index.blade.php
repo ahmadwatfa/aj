@@ -1,12 +1,12 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="d-flex justify-content-center">
+<title>جمعية أجيال للتدريب والتطوير</title>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="مؤسسة أجيال للتدريب والتطوير">
-    <meta name="keywords" content="مؤسسة أجيال للتدريب والتطوير">
+    <meta name="description" content="جمعية أجيال للإبداع والتطوير">
+    <meta name="keywords" content="جمعية أجيال للإبداع والتطوير">
     <meta name="robots" content="all">
 
-    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('image/icon.png')}}" type="image/x-icon">
     <!-- Our CSS stylesheet file -->
 
     <link rel="stylesheet" href="assets/css/jsCarousel-2.0.0.css">

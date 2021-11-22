@@ -55,10 +55,38 @@
 
                                                 </div>
 
-                                                
+                                                <div class="col-md-4">
+
+                                                    <div class="file-upload">
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">إضافة
+                                                            صورة</button>
+
+                                                        <div class="image-upload-wrap">
+                                                            <input class="file-upload-input"  type='file' name="image"
+                                                                onchange="readURL(this);" accept="image/*" />
+                                                                @if($about->image)<img src="{{ asset('storage/' . $about->image) }}" width="100%">@endif
+                                                                @error('image')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
+                                                            <div class="drag-text">
+                                                                <h3>إضافة صورة </h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="file-upload-content">
+                                                            <img class="file-upload-image" src="#" alt="your image" />
+                                                            <div class="image-title-wrap">
+                                                                <button style="font-weight: bold;" class="btn btn-danger"
+                                                                    type="button" onclick="removeUpload()"
+                                                                    class="remove-image">حذف <span
+                                                                        class="image-title"></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div><!-- /.tab-pane -->
-                                        
+                                       
                                     </div><!-- /.tab-content -->
                                 </div><!-- nav-tabs-custom -->
                             </div>
@@ -78,14 +106,18 @@
 
         </div> <!-- /.row -->
         </section><!-- /.content -->
+    </div>
+
+
+
     </div><!-- /.content-wrapper -->
-     <script>
+    <script>
         var num = 1;
         $("#btn-plus").click(function() {
             $("#pro_plus").append('<div class="col-md-12">' +
                 '<div class="form-group">' +
                 '<div class="col-sm-3">' +
-                '<input type="text" class="form-control" name="pro_n_id' + (num) +
+                '<input type="text"  class="form-control" name="pro_n_id' + (num) +
                 '" placeholder="الاسم" data-fv-field="">' +
                 '</div>' +
                 '<div class="col-sm-9">' +
@@ -96,9 +128,9 @@
                 '</div>');
         });
 
-    </script> 
+    </script>
 
-     <script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function() {
 
 
@@ -120,16 +152,12 @@
                         min: 1
                     },
 
-                    screen: "required",
-                    memory_size: "required",
-                    cpu: "required",
-                    battery: "required",
-                    os: "required"
+                  
                 },
                 messages: {
-                   
+                    name: "الرجاء إدخال اسم المنتج",
                     img: "الرجاء إختيار صورة",
-                  
+                    
                 },
                 errorElement: "em",
                 errorPlacement: function(error, element) {
@@ -174,7 +202,7 @@
             });
         });
 
-    </script> 
+    </script>
 
 
 @endsection

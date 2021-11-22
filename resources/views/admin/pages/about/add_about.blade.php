@@ -54,7 +54,34 @@
 
                                                 </div>
 
-                                                
+                                                <div class="col-md-4">
+
+                                                    <div class="file-upload">
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">إضافة
+                                                            صورة</button>
+
+                                                        <div class="image-upload-wrap">
+                                                            <input class="file-upload-input" type='file' name="image"
+                                                                onchange="readURL(this);" accept="image/*" />
+                                                            @error('image')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
+                                                            <div class="drag-text">
+                                                                <h3>إضافة صورة </h3>
+                                                            </div>
+                                                        </div>
+                                                        <div class="file-upload-content">
+                                                            <img class="file-upload-image" src="#" alt="your image" />
+                                                            <div class="image-title-wrap">
+                                                                <button style="font-weight: bold;" class="btn btn-danger"
+                                                                    type="button" onclick="removeUpload()"
+                                                                    class="remove-image">حذف <span
+                                                                        class="image-title"></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div><!-- /.tab-pane -->
                                         

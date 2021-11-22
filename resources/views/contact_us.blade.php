@@ -14,68 +14,52 @@
                         <div class="center">
                             <div class="col-md-12 pad-r no-pad-l">
                                 <p style="
-                                    font-size: 23px;
-                                    font-weight: 800;
-                                    text-align: center;
-                                    color: darkred;
-                                ">اتصل بنا </p>
+                                        font-size: 23px;
+                                        font-weight: 800;
+                                        text-align: center;
+                                        color: darkred;
+                                    ">اتصل بنا </p>
 
                                 <div class="contact-content">
                                     <div class="col-md-7">
-                                        <address class="vcard" style="
-                                            margin-top: 44px;
-                                        ">
-                                            <p><i class="fa fa-map-marker" aria-hidden="true"></i>غزة، حي تل الهوا، الرمال
-                                                الجنوبي ، دوار الأمين – خلف المركز الثقافي الأرثوذكسي العربي - عمارة النجار
-                                                - الطابق الثاني </p>
-                                            <p><i class="fa fa-mobile" aria-hidden="true"></i><span
-                                                    style="direction: ltr;display: inline-block;">(00972) 599 416-910</span>
-                                            </p>
-                                            <p class="tel">
-                                                <i class="fa fa-phone fa-lg"></i>
-                                                2639466
-                                            </p><!-- /.Paragraph -->
-                                            <i class="fa fa-envelope fa-lg"></i>
-                                            <a class="email" target="_blank" href="mailto:info@civitas.ps">
-                                                <small>info@civitas.ps</small>
-                                            </a>
+                                        {{-- <address class="vcard" style="
+                                                margin-top: 44px;"> --}}
+                                             
+                                               
+                                                 
+                                                
+                                            <p>المقر الرئيسي : غزة، حي الشعف، شارع الأيبكي – عمارة جندية، الطابق الثاني. </p>
+                                            <p style=" padding-left: 45px !important;">مركز فرح : غزة، حي الشعف، عمارة الجمال، الطابق الأرضي. </p>
+                                            <p> حاضنة الاعمال : غزة، تل الهوا، بالقرب من مطعم سيدار، عمارة أبو يوسف النجار، الطابق 3 </p>
+                                            <p><span style="direction: ltr;display: inline-block;"> تليفون :  82839559</span></p>
+                                            <p><span style="direction: ltr;display: inline-block;"> جوال :  0599575591</span></p>
+                                            <p><span style="direction: ltr;display: inline-block;">  e.ajyal@gmail.com : البريد الإلكتروني</span></p>
+                                            <p><span style="direction: ltr;display: inline-block;">  complaints.ajyal@gmail.com : بريد الشكاوى</span></p>
+                                          
+                                          
                                         </address>
                                         <!-- /.address -->
                                         <div class="social">
-                                            <a href="https://www.facebook.com/CIVTAS/" target="_blank">
+                                            <a href="https://www.facebook.com/Ajyal.aacd/" target="_blank">
 
 
                                                 <i class="fa fa-facebook cycle" aria-hidden="true"></i>
                                             </a>
 
-                                            <a href="https://twitter.com/Civitas123" target="_blank">
+                                          
+                                          
 
-                                                <i class="fa fa-twitter cycle" aria-hidden="true"></i>
-                                            </a>
-
-
-                                            <a href="#">
-
-
-                                                <i class="fa fa-instagram cycle" aria-hidden="true"></i>
-                                            </a>
-
-                                            <a href="https://www.youtube.com/user/civitas2001" target="_blank">
-
-                                                <i class="fa fa-youtube cycle" aria-hidden="true"></i>
-                                            </a>
-
+                                           
                                         </div>
-                                        <!-- /.social -->
-                                        <div id="map"></div>
-                                        <!-- #map -->
+                                    
 
                                     </div>
                                     <!-- /.col-md-7 -->
                                     <div class="col-md-5 forms">
                                         <div role="form" class="wpcf7" id="wpcf7-f174-p175-o1" lang="ar" dir="rtl">
 
-                                            <form action="{{route('contact.store')}}" method="post" class="wpcf7-form">
+                                            <form action="{{ route('contact.store') }}" method="post"
+                                                class="wpcf7-form">
                                                 @csrf
 
                                                 <div class="form-group">
@@ -113,16 +97,18 @@
                                                         الرسالة<span>*</span><br>
                                                     </label><br>
                                                     <span class="wpcf7-form-control-wrap your-message">
-                                                        <textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
+                                                        <textarea name="message" cols="40" rows="10"
+                                                            class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control"
                                                             id="comment" aria-required="true" aria-invalid="false"
-                                                            placeholder="الرسالة..." style="color = 'black'"></textarea></span>
+                                                            placeholder="الرسالة..."
+                                                            style="color = 'black'"></textarea></span>
                                                 </div>
-                                             
+
                                                 <p> <input type="submit" value="ارسال"
                                                         class="wpcf7-form-control wpcf7-submit btn-default nice"><br>
                                                     <!-- input:submit -->
                                                 </p>
-                                               
+
                                             </form>
                                         </div>
                                     </div>

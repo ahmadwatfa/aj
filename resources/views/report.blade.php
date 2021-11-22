@@ -16,12 +16,12 @@
                             
                         
                            <div class="float-R M-B15 M-L10 border-B1" style="width: 48.5%;background-color: #FBFBFB;"> 
-                             <img class="float-R M-L10" src="assets/document-icon.jpg" width="120" height="120" alt="" title="">
+                             <img class="float-R M-L10" src="{{asset('image/logo.png')}}" width="120" height="120" alt="" title="">
                              <a target="_blank" href="{{route('file' , $rep->id )}}">
                                 <h3 class="FN-Z14 FNRegular FNred" style="padding: 6px;">{{$rep->name}}</h3>
                             </a><center>
                                 <a target="_blank" href="{{route('file' , $rep->id )}}">
-                                    <img style="padding-top: 10px;" src="assets/download-icon.png" width="64" height="64" alt="">
+                                    <img style="padding-top: 10px;" src="{{asset('image/download-icon.png')}}" width="64" height="64" alt="">
                                 </a></center>
                             </div>
                             @endforeach

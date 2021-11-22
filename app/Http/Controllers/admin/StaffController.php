@@ -115,6 +115,14 @@ class StaffController extends Controller
            
         ]);
         $st = Staff::findOrFail($staff->id);
+        
+        $published = staff::get();
+        foreach($published as $publish){
+            $publish->is_publish = 0 ;
+            $publish->save();
+        }
+        $st['is_publish'] = 1;
+      
         $st->update($request->all());
         
         return redirect()->route('staff.index')->with('success' , 'تم تعديل الهيكلية بنجاح');

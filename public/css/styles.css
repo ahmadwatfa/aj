@@ -16,6 +16,12 @@
 /*-------------------------
 	General Styles
 --------------------------*/
+html
+{
+	display: flex;
+	justify-content: center;
+	/* background-color: #fff; */
+}
 body{
 	font-family: 'Cairo';
 	font-size:12px;
@@ -328,7 +334,7 @@ header .bgslideSub{
 header .linetatrez{
 	position:absolute;
 	top:212px;
-	left:-15px;
+	/* left:-15px; */
 	width:100%;
 	height:47px;
 	background:url(../images/linetatrez.png) 0 0 repeat-x;
@@ -337,7 +343,7 @@ header .linetatrez{
 header #logo{
 	width:123px;
 	height:168px;
-	background:url(../images/pic.png) 0 0 no-repeat;
+	background:url(../images/LogoAjyal.jpg) 0 0 no-repeat;
 	position:absolute;
 	right:36px;
 	top:36px;
@@ -445,9 +451,12 @@ header.header h2.title{
 	border:none;
 	direction:rtl;
 	}
+	#header{
+		position: relative;
+	}
+
 #menu{
 	position:absolute;
-	right:176px;
 	top:81px;
 	z-index:4;
 	width:90%;
@@ -512,11 +521,10 @@ header.header h2.title{
 	}
 
 .headerpicdown{
-	width:112.5%;
+	width:101%;
 	height:64px;
 	background:url(../image/headerpicdown.png) repeat-x;
 	}
-
 .search{
 	width:212px;
 	padding:2px 5px;
@@ -644,7 +652,7 @@ header.header h2.title{
     color: #9A2223;
 	}
 #slide .s2{
-	width:300px;
+	width:260px;
 	height:336px;
 	float:right;
 	}
@@ -785,8 +793,8 @@ footer #logo{
 footer .linetatrez{
 	position:absolute;
 	bottom:-35px;
-	left:-148px;
-	width:112.5%;
+	/* left:-148px; */
+	width:100%;
 	height:64px;
 	background:url(../image/headerpicdown.png) 0 0 repeat-x;
 	z-index:1;
@@ -806,7 +814,7 @@ footer ul li{
 	height:auto;
 	}
 .map .title{
-	width:35%;
+	width:80%;
 	}
 .map .address{
 	width:55%;
@@ -829,6 +837,21 @@ footer ul li{
 	}
 .input {
 	margin:10px 0px;
+	}
+	#logo-img
+	{
+		height: 140px;
+		position: relative;
+		bottom: 50px;
+		cursor: pointer;
+	}
+	.logo:hover
+	{
+		border-bottom: none !important;
+	}
+	a:hover
+	{
+		text-decoration: none !important;
 	}
 .input input{
 	border:1px solid #d4d4d4;

@@ -13,7 +13,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/assets/admin/dist/css/fontawesome-4.4.0.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="/assets/admin/dist/css/ionicons.min.css">
+    <link rel="shortcut icon" href="{{asset('image/icon.png')}}" type="image/x-icon">
+    
     <!-- DataTables -->
     <link rel="stylesheet" href="/assets/admin/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="/assets/admin/plugins/select2/select2.min.css">
@@ -56,11 +57,13 @@
 
 
             <div class="navbar-custom-menu">
+                
                 <ul class="nav navbar-nav">
                     <!-- User Account: style can be found in dropdown.less -->
-                    
+                   
 
                     <li>
+                        
                         <a href="{{route('logout')}}" data-toggle=""><i class="fa fa-power-off"></i></a>
                     </li>
                 </ul>
